@@ -57,7 +57,7 @@ class SinglyLinkedList:# it'll basically act as a wrapper class which will wrap 
 
 	def insertAtPos(pos,nodeData):	
 		if(pos > SinglyLinkedList.Size() + 1):
-			print("Oops! not possible")
+			print("Oops! position is out of bond")
 		else:
 			node = Node(nodeData)
 			current = SinglyLinkedList.Start
