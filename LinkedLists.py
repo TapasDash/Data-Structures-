@@ -26,9 +26,12 @@ class SinglyLinkedList:# it'll basically act as a wrapper class which will wrap 
 
 	def insertAtStart(nodeData):
 		node = Node(nodeData)
-		current = SinglyLinkedList.Start
-		SinglyLinkedList.Start = node
-		node.nextNode = current
+		if(SinglyLinkedList.isEmpty()):
+			SinglyLinkedList.Start = node
+		else:
+			current = SinglyLinkedList.Start
+			SinglyLinkedList.Start = node
+			node.nextNode = current
 
 	def displayData():
 		current = SinglyLinkedList.Start
