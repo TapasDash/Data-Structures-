@@ -41,11 +41,14 @@ class SinglyLinkedList:# it'll basically act as a wrapper class which will wrap 
 		print("None")
 
 	def insertAtEnd(nodeData):
-		node = Node(nodeData)
-		current = SinglyLinkedList.Start
-		while current.nextNode is not None:
-			current = current.nextNode
-		current.nextNode = node
+		if(SinglyLinkedList.isEmpty()):
+			print("Oops!! List is empty")
+		else:
+			node = Node(nodeData)
+			current = SinglyLinkedList.Start
+			while current.nextNode is not None:
+				current = current.nextNode
+			current.nextNode = node
 
 	def Size():
 		current = SinglyLinkedList.Start
