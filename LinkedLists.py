@@ -53,13 +53,18 @@ class SinglyLinkedList:# it'll basically act as a wrapper class which will wrap 
 				current = current.nextNode
 			current.nextNode = node
 
+	
 	def Size():
-		current = SinglyLinkedList.Start
-		count = 1
-		while current.nextNode is not None:
-			count += 1
-			current = current.nextNode
-		return count
+		if(SinglyLinkedList.isEmpty()):
+			count = 0
+			return count
+		else:
+			current = SinglyLinkedList.Start
+			count = 1
+			while current.nextNode is not None:
+				count += 1
+				current = current.nextNode
+			return count
 
 	def insertAtPos(pos,nodeData):	
 		if(pos > SinglyLinkedList.Size() + 1):
