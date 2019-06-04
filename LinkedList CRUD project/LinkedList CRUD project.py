@@ -173,16 +173,11 @@ while True:
 		SinglyLinkedList.displayData()
 		continue
 	elif n is 6:
-		SinglyLinkedList.deleteDuplicate()
-		print('Linked List after operation :')
-		SinglyLinkedList.displayData()
-		continue
-	elif n is 7:
 		SinglyLinkedList.reverseLinkedList()
 		print('Linked List after operation :')
 		SinglyLinkedList.displayData()
 		continue
-	elif n is 8:
+	elif n is 7:
 		exit()
 	else:
 		print('OOPS!! your Input is out of bound')
