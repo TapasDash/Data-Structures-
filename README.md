@@ -1,0 +1,2 @@
+# Data-Structures-
+I've put in the data structure programmes coded either in C++ or Python. I've made these programmes to brush up my knowledge on Data Structures which I'd studied way back in my sophomore. I've coded these data structures right from the scratch to understand the nitty-gritty and beauty of data structures and how much impact these can have in our tech world. Under the hood, these data structures run the tech industry and tech industry run the world :P
