@@ -121,62 +121,15 @@ class SinglyLinkedList:# it'll basically act as a wrapper class which will wrap 
 		else:
 			SinglyLinkedList.reverseDisplayRec(current.nextNode)
 			print(current.nodeData)  
+			
 
-	@staticmethod
-	def reverseLinkedListRec(current,nextt): # current = Start initiated before the call of this fucntion
-		if nextt is None:					# next = Start.nextNode
-			SinglyLinkedList.Start = current 
-			return
-		else:
-			SinglyLinkedList.reverseLinkedListRec(current.nextNode,nextt.nextNode)
-			nextt.nextNode = current
-			current.nextNode = None
-
-	@staticmethod
-	def deleteDuplicate():
-		data = SinglyLinkedList.Start
-		prev = data.nextNode
-		current = prev.nextNode
-		
-		while data is not None: # while(data!=NULL) in C++/Java
-
-			while current is not None: # while(current!=NULL) in C++/Java
-
-				if data.nodeData is prev.nodeData:
-					data.nextNode = current
-					del prev
-
-				elif data.nodeData is current.nodeData:
-					prev.nextNode = current.nextNode
-					del current
-
-				else:
-					current = current.nextNode
-					prev = prev.nextNode
-
-			data = data.nextNode
-			prev = data.nextNode
-			current = prev.nextNode
-		print('No duplicate dat found !')
-
-
-data = input("\nEnter the series of data to be pushed into linkedlist (use ',' as delimeter) : \n").split(',')
+data = input("\nEnter the series of data to be pushed into linkedlist (use ',' as delimiter) : \n").split(',')
 
 for d in data:
 	SinglyLinkedList.pushData(d)
 
 print('\nYour Linked List :')
 SinglyLinkedList.displayData()
-# print('Which operation you want to perform  onto your linkedlist?  :')
-# print('1. Insert Data at start')
-# print('2. Insert Data at end')
-# print('3. Insert Data at nth position')
-# print('4. Delete Data at nth position')
-# print('5. Reverse display of the linked list')
-# print('6. Delete duplicate elements of linked list')
-# print('7. Reverse the whole linked list')
-# print('8. Exit\n')
-# n = int(input('Enter (1-8) :'))
 
 while True:
 	print('Which operation you want to perform  onto your linkedlist?  :')
@@ -185,10 +138,9 @@ while True:
 	print('3. Insert Data at nth position')
 	print('4. Delete Data at nth position')
 	print('5. Reverse display of the linked list')
-	print('6. Delete duplicate elements of linked list')
-	print('7. Reverse the whole linked list')
-	print('8. Exit\n')
-	n = int(input('Enter (1-8) :'))
+	print('6. Reverse the whole linked list')
+	print('7. Exit\n')
+	n = int(input('Enter (1-7) :'))
 
 	if n is 1:
 		nodeData = int(input('Enter the data to insert at start = '))
@@ -216,7 +168,7 @@ while True:
 		SinglyLinkedList.displayData()
 		continue
 	elif n is 5:
-		SinglyLinkedList.reverseDisplayRec(SinglyLinkedList.Start)
+		SinglyLinkedList.reverseLinkedList()
 		print('Linked List after operation :')
 		SinglyLinkedList.displayData()
 		continue
@@ -234,13 +186,3 @@ while True:
 		exit()
 	else:
 		print('OOPS!! your Input is out of bound')
-
-
-# SinglyLinkedList.pushData(5)
-# SinglyLinkedList.pushData(7)
-# SinglyLinkedList.pushData(8)
-# SinglyLinkedList.pushData(8)
-# SinglyLinkedList.pushData(9)
-# print(SinglyLinkedList.Size())
-# SinglyLinkedList.deleteDuplicate()
-# SinglyLinkedList.displayData()
